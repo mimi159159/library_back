@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 from flask_restful import Resource, Api
 import os,json,time
 from flask_cors import CORS,cross_origin
-from sqlalchemy.orm import class_mapper
+
 from werkzeug.utils import secure_filename
 import jwt
 
