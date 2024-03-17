@@ -13,7 +13,7 @@ from flask_cors import CORS,cross_origin
 from sqlalchemy.orm import class_mapper
 from werkzeug.utils import secure_filename
 import jwt
-from jwt.exceptions import InvalidTokenError, DecodeError as JWSDecodeError
+
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, get_jwt_identity, jwt_required, get_jwt
 from flask_jwt_extended.exceptions import NoAuthorizationError
@@ -115,12 +115,11 @@ def token_required(f):
             return jsonify({'message': 'Token is missing'}), 401
 
 
-        try:
-            data = jwt.decode(token, app.config['JWT_SECRET_KEY'], algorithms=['HS256'])
-            current_user_id = data['user_id']
         
-        except jwt.InvalidTokenError:
-            return jsonify({'message': 'Invalid token'}), 401
+        data = jwt.decode(token, app.config['JWT_SECRET_KEY'], algorithms=['HS256'])
+        current_user_id = data['user_id']
+        
+ 
 
 
         return f(current_user_id, *args, **kwargs)
@@ -525,7 +524,6 @@ def profile():
 
 @app.errorhandler(NoAuthorizationError)
 
-@app.errorhandler(InvalidTokenError)
 def handle_auth_error(e):
     return jsonify({'error': 'unauthorized', 'message': 'You are not logged in'}), 401
 
