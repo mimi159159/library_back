@@ -1,0 +1,91 @@
+/* adds some margin below the link sets */
+.navbar .dropdown-menu div[class*="col"] {
+  margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+  background-color:#6c5ce7!important;
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  .navbar {
+      padding-top:0px;
+      padding-bottom:0px;
+  }
+
+  .navbar .nav-item {
+      padding:.5rem .5rem;
+      margin:0 .25rem;
+  }
+
+  .navbar .dropdown {position:static;}
+
+  .navbar .dropdown-menu {
+      width:100%;
+      left:0;
+      right:0;
+      top:45px;
+      display:block;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s linear;
+  }
+
+  .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+      display:block;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0s, opacity 0.3s linear;
+  }
+
+  .navbar .dropdown-menu {
+      border: 1px solid rgba(0,0,0,.15);
+      background-color: #fff;
+  }
+}
+
+/* Override Bootstrap's primary color */
+.navbar.bg-primary {
+  background-color: #6c5ce7 !important; /* Use !important to ensure override */
+}
+
+/* Additional styles for screens smaller than 992px */
+@media screen and (max-width: 991px) {
+  .navbar-nav .nav-link {
+      padding: 0.7rem 1rem; /* Increase touch area */
+  }
+
+  .navbar .navbar-toggler {
+      padding: .25rem .75rem; /* Adjust toggler size if necessary */
+      font-size: 1.25rem; /* Makes the toggler icon larger */
+  }
+
+  .navbar .dropdown-menu {
+      position: static; /* Adjust if dropdown needs to be full width */
+      visibility: visible; /* Always visible on smaller screens */
+      opacity: 1;
+      top: 100%; /* Adjust to make dropdown appear below the navbar */
+      width: auto; /* Set to auto or 100% based on your design */
+      border: 0; /* Remove any borders */
+      transition: none; /* Disable transitions on small screens */
+  }
+  
+  /* Optional: If your dropdown menus are too large, consider making them scrollable */
+  .navbar .dropdown-menu {
+      max-height: 300px; /* Adjust based on your needs */
+      overflow-y: auto;
+  }
+}
+/* Ensure buttons are visible and well-spaced on all screen sizes */
+.navbar .navbar-nav .nav-item .btn {
+  margin-left: 10px; /* Adjust spacing to your preference */
+  display: block; /* Ensure buttons are always displayed */
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-collapse {
+      justify-content: flex-end; /* Align items to the right on small screens */
+  }
+}

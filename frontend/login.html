@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/style/nav.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="resources/style/login.css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="resources/images/icons8-book-64.png">
+
+<script src="resources/scripts/main.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+  .toast {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .toast-success {
+    background-color: green;
+  }
+
+  .toast-error {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+        <a class="navbar-brand" href="index.html">MK LIBRARY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                view
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allBooks.html">All Books</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allCust.html">All customers</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLoans.html">All loans</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLate.html">All late loans</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img style="width: 300px;" src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                add
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                     
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addBook.html">add a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addCust.html">add a customer</a>
+                      </li>
+                    
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      
+                        <img style="width: 200px; height: 200px;" src="https://images.pexels.com/photos/2767814/pexels-photo-2767814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                     
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  loans & returns
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+                  
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="loanBook.html">Loan a Book</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="returnBook.html">return a book</a>
+                        </li>
+                      </ul>
+                      </div>
+                      <!-- /.col-md-4  -->
+                      <div class="col-md-4">
+                          <img style="width: 300px;" src="https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                      </div>
+                    
+                    </div>
+                  </div>
+                  <!--  /.container  -->
+        
+                </div>
+              </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                search
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                  
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchBook.html">search a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchCust.html">search a customer</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/4855385/pexels-photo-4855385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+   
+              </div>
+            </li>
+      
+          </ul>
+
+        </div>
+        <div class="ml-auto">
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="loginButton" class="btn btn-outline-light my-2 my-sm-0" href="login.html" role="button">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="border-radius: 50px; " id="registerButton" class="btn btn-outline-light my-2 my-sm-0" href="register.html" role="button">Register</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="profile.html" role="button">profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <button onclick="logout()" class="btn btn-outline-light my-2 my-sm-0" style="border:none ;"> <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="index.html" role="button">log out</a></button>
+                   </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+        <!-- ------------------------ -->
+        <div class="container">
+          <div class="d-flex justify-content-center h-100">
+              <div class="card">
+                  <div class="card-header">
+                      <h3>log In</h3>
+                  </div>
+                  <div class="card-body">
+                      <form id="login-form">
+                          <div class="input-group form-group">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                              </div>
+                              <input type="text" class="form-control"  placeholder="username" id="username" name="username" required>
+                              
+                          </div>
+                          <div class="input-group form-group">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                              </div>
+                              <input type="password" class="form-control" placeholder="password" id="password" name="password" required>
+                          </div>
+                         
+                          <div class="form-group">
+                              <input type="submit" value="Login" class="btn float-right login_btn">
+                          </div>
+                      </form>
+                  </div>
+                  <div class="card-footer">
+                      <div class="d-flex justify-content-center links">
+                          Don't have an account?<a href="register.html">register</a>
+                      </div>
+                     
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script>
+const loginForm = document.getElementById('login-form');
+
+loginForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const loginData = {
+        username: username,
+        password: password
+    };
+
+    axios.post('https://library-back-5.onrender.com/login', loginData, {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (response) {
+        const accessToken = response.data.access_token;
+        sessionStorage.setItem('access_token', accessToken);
+        console.log('Access token stored in sessionStorage:', accessToken);
+        
+        // Display a success notification using Toastify
+        Toastify({
+            text: "Login successful",
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "green",
+        }).showToast();
+
+        loginForm.reset();
+    })
+    .catch(function (error) {
+        console.error('Error logging in:', error);
+
+        // Display an error notification using Toastify
+        Toastify({
+            text: 'Error logging in: ' + error.message,
+            duration: 3000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            backgroundColor: "red",
+        }).showToast();
+    });
+});
+
+
+      </script>
+<script src="resources/scripts/nav.js"></script>
+
+
+</body>
+</html>

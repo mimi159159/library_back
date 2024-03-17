@@ -1,0 +1,47 @@
+.container{
+    margin-top:50px;
+}
+.stretch-card > .card {
+    width: 2000px;
+    min-width: 200px;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/261806/pexels-photo-261806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)!important; /* Replace with your chosen color */
+}
+img {
+    width: 100px;
+}
+.card {
+    width: 300px; /* Equal width and height to form a square */
+    height: 300px; /* Adjust height as needed to form a square */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255) !important;
+    background-clip: border-box;
+    border: 1px solid #d2d2dc;
+    border-radius: 50px !important;
+;
+}
+
+
+.btn-info {
+    color: #fff;
+    background-color: #3da5f4;
+    border-color: #3da5f4;
+}
+
+.btn {
+    font-size: 0.875rem;
+    line-height: 1;
+    font-weight: 400;
+    padding: .7rem 1.5rem;
+    border-radius: 0.1275rem;
+}
+
+h6 {
+    font-size: .9375rem;
+}

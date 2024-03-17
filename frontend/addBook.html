@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/style/nav.css">
+
+    <script src="resources/scripts/main.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="resources/style/add.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<link rel="icon" type="image/x-icon" href="resources/images/icons8-book-64.png">
+
+<style>
+.form-field {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+}
+
+.input-text {
+  width: 100%; 
+  margin-top: 0.5rem; 
+}
+
+body {
+  background-image: url(resources/images/addBook.png) !important;
+}
+
+input[type="file"] {
+  margin-top: 0.5rem; 
+}
+.toast {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .toast-success {
+    background-color: green;
+  }
+
+  .toast-error {
+    background-color: red;
+  }
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+        <a class="navbar-brand" href="index.html">MK LIBRARY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                view
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allBooks.html">All Books</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allCust.html">All customers</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLoans.html">All loans</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLate.html">All late loans</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img style="width: 300px;" src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                add
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                     
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addBook.html">add a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addCust.html">add a customer</a>
+                      </li>
+                    
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      
+                        <img style="width: 200px; height: 200px;" src="https://images.pexels.com/photos/2767814/pexels-photo-2767814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                     
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  loans & returns
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+                  
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="loanBook.html">Loan a Book</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="returnBook.html">return a book</a>
+                        </li>
+                      </ul>
+                      </div>
+                      <!-- /.col-md-4  -->
+                      <div class="col-md-4">
+                          <img style="width: 300px;" src="https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                      </div>
+                    
+                    </div>
+                  </div>
+                  <!--  /.container  -->
+        
+                </div>
+              </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                search
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                  
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchBook.html">search a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchCust.html">search a customer</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/4855385/pexels-photo-4855385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+   
+              </div>
+            </li>
+      
+          </ul>
+
+        </div>
+        <div class="ml-auto">
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="loginButton" class="btn btn-outline-light my-2 my-sm-0" href="login.html" role="button">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="border-radius: 50px; " id="registerButton" class="btn btn-outline-light my-2 my-sm-0" href="register.html" role="button">Register</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="profile.html" role="button">profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <button onclick="logout()" class="btn btn-outline-light my-2 my-sm-0" style="border:none ;"> <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="index.html" role="button">log out</a></button>
+                   </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+        <section class="get-in-touch">
+          <h1 class="title">add a book</h1>
+          <form id="contact-form" class="contact-form row" method="POST">
+             <div class="form-field col-lg-6">
+                <input id="name" class="input-text js-input" type="text" name="name" required>
+                <label class="label" for="name">Book Name</label>
+             </div>
+             <div class="form-field col-lg-6 ">
+                <input id="author" class="input-text js-input" type="text" name="author" required>
+                <label class="label" for="author">author</label>
+             </div>
+             <div class="form-field col-lg-6 ">
+                <input id="year_published" class="input-text js-input" type="text" name="year_published" required>
+                <label class="label" for="year_published">year published</label>
+             </div>
+             <div class="form-group" style="color: #5543ca ;">
+              <label for="image">Image:</label> 
+              <input type="file" class="form-control-file" name="image" id="image"> 
+          </div>
+          
+           
+          </div>
+             <div class="form-field col-lg-12">
+                <input id="show-toast" class="submit-btn" type="submit" value="Add Book">
+             </div>
+          </form>
+          <div id="notification"></div>
+
+       </section>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="resources/scripts/nav.js"></script>
+
+<script>
+   const MY_SERVER = 'https://library-back-5.onrender.com';
+
+
+// Function to display Toastify notification
+function showToast(message, type) {
+    Toastify({
+        text: message,
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        style: {
+            background: type === 'success' ? 'green' : 'red'
+        },
+        stopOnFocus: true,
+        className: `toast toast-${type}`,
+    }).showToast();
+}
+
+// Function to add a book
+const addBook = (event) => {
+    event.preventDefault();
+    const token = sessionStorage.getItem("access_token");
+
+    // Check if a valid token exists
+    if (!token) {
+        showToast("You must be logged in to add a book.", "error");
+        return; // Exit the function if no token is found
+    }
+
+    // Decode the token to access user data, including the role
+    const tokenPayload = JSON.parse(atob(token.split('.')[1]));
+    const userRole = tokenPayload.role;
+
+    if (userRole === 'Admin') {
+        const name = document.getElementById('name').value;
+        const author = document.getElementById('author').value;
+        const year_published = document.getElementById('year_published').value;
+        const imageInput = document.getElementById('image');
+        const imageFile = imageInput.files[0];
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('author', author);
+        formData.append('year_published', year_published);
+        formData.append('image', imageFile);
+        console.log(imageFile)
+        axios.post(`${MY_SERVER}/addBook`, formData, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        })
+        .then(function (response) {
+            if (response.status === 200) {
+                console.log(response.data);
+                showToast('Book was added successfully', 'success');
+                // You can also reset the form if needed: form.reset();
+            } else {
+                // Handle other successful status codes or situations
+            }
+        })
+        .catch(function (error) {
+            console.error(error);
+            showToast('Failed to add book: ' + error.response.data.message, 'error');
+        });
+    } else {
+        // User is not an admin, show an error message
+        showToast('Only admin users can add a book.', 'error');
+    }
+};
+
+const form = document.querySelector('.contact-form');
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    addBook(event);
+}); ;
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* .container{
+    margin-top:200px;
+    
+} */
+
+.btn:hover{
+    color:#fff;
+}
+
+.input-text:focus{
+       
+  
+    box-shadow: 0px 0px 0px;
+    border-color:#75239b;
+    outline: 0px;
+}
+
+.form-control {
+    border: 1px solid #821f9a;
+}
+
+
+ 

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/style/nav.css">
+    <link rel="stylesheet" href="resources/style/all.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<link rel="icon" type="image/x-icon" href="resources/images/icons8-book-64.png">
+
+
+
+<style>
+  .toast {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .toast-success {
+    background-color: green;
+  }
+
+  .toast-error {
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+        <a class="navbar-brand" href="index.html">MK LIBRARY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                view
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+                
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allBooks.html">All Books</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allCust.html">All customers</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLoans.html">All loans</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="allLate.html">All late loans</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img style="width: 300px;" src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                add
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                     
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addBook.html">add a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="addCust.html">add a customer</a>
+                      </li>
+                    
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      
+                        <img style="width: 200px; height: 200px;" src="https://images.pexels.com/photos/2767814/pexels-photo-2767814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                     
+                    </div>
+                    <!-- /.col-md-4  -->
+                  </div>
+                </div>
+                <!--  /.container  -->
+      
+      
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  loans & returns
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+                  
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="loanBook.html">Loan a Book</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="returnBook.html">return a book</a>
+                        </li>
+                      </ul>
+                      </div>
+                      <!-- /.col-md-4  -->
+                      <div class="col-md-4">
+                          <img style="width: 300px;" src="https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                      </div>
+                    
+                    </div>
+                  </div>
+                  <!--  /.container  -->
+        
+                </div>
+              </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                search
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      
+      
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4">
+                  
+                      <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchBook.html">search a book</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="searchCust.html">search a customer</a>
+                      </li>
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                      <ul class="nav flex-column">
+                    </ul>
+                    </div>
+                    <!-- /.col-md-4  -->
+                    <div class="col-md-4">
+                        <img src="https://images.pexels.com/photos/4855385/pexels-photo-4855385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="library" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+   
+              </div>
+            </li>
+      
+          </ul>
+
+        </div>
+        <div class="ml-auto">
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="loginButton" class="btn btn-outline-light my-2 my-sm-0" href="login.html" role="button">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a style="border-radius: 50px; " id="registerButton" class="btn btn-outline-light my-2 my-sm-0" href="register.html" role="button">Register</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="profile.html" role="button">profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <button onclick="logout()" class="btn btn-outline-light my-2 my-sm-0" style="border:none ;"> <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="index.html" role="button">log out</a></button>
+                   </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+        <h1>All Loans</h1>
+        <!-- <div class="container"> -->
+
+        
+<div id="loans-list" class="row" style="border-width: 100px;">
+    <!-- <div class="row" id="loan-row"> -->
+        <!-- Your cards will be added here dynamically -->
+    </div>
+</div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            
+            const MY_SERVER = 'https://library-back-5.onrender.com';
+            function fetchLoan() {
+                axios.get(`${MY_SERVER}/allLoans`) // Update the URL with your server's address
+                    .then(function (response) {
+                        const loans = response.data;
+                        const loanList = document.getElementById('loans-list');
+    
+                        loans.forEach(function (loan) {
+                            
+                            const loansDiv = document.createElement('div')
+                            loansDiv.classList.add('col-md-3', 'mb-4', 'card-custom')
+                            
+    
+
+        
+                           
+                            const loansInfo = `
+
+                            <div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+
+<div class="col-md-5">
+							<div class="card">
+								<div class="card-body text-center">
+									<div>
+										<img src="resources/images/book.png" width= "90px" class="img-lg rounded-circle mb-4" alt="profile image">
+										<h4>${loan.book_name}</h4>
+										<p class="text-muted mb-0">customer:${loan.customer_name}</p>
+									</div>
+									<p class="mt-2 card-text">
+                    customer id: ${loan.custID}
+                    Book id: ${loan.bookID}
+                                                  Loan Date: ${new Date(loan.loandate).toLocaleDateString()}
+                                                  Return Date: ${loan.returndate ? new Date(loan.returndate).toLocaleDateString() : 'N/A'} 
+									</p>
+							
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+							</div>
+						</div>
+
+
+
+
+
+
+
+`
+
+                            loansDiv.innerHTML = loansInfo;
+    
+                            
+                            loanList.appendChild(loansDiv);
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error fetching customer data:', error);
+                    });
+            }
+    
+            // Call the fetchCustomers function when the page loads
+            fetchLoan();
+            
+    </script>
+
+<script src="resources/scripts/nav.js"></script>
+<script src="resources/scripts/main.js"></script>
+</body>
+</html>
