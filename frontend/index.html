@@ -206,26 +206,22 @@
           </ul>
 
         </div>
-        <div class="ml-auto">
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a style="border-radius: 50px;" id="loginButton" class="btn btn-outline-light my-2 my-sm-0" href="login.html" role="button">Log in</a>
-                  </li>
-                  <li class="nav-item">
-                    <a style="border-radius: 50px; " id="registerButton" class="btn btn-outline-light my-2 my-sm-0" href="register.html" role="button">Register</a>
-                  </li>
-                  
-                  <li class="nav-item">
-                    <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="profile.html" role="button">profile</a>
-                  </li>
-                  <li class="nav-item">
-                   <button onclick="logout()" class="btn btn-outline-light my-2 my-sm-0" style="border:none ;"> <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="index.html" role="button">log out</a></button>
-                  </li>
-                </ul>
-              </div>
-          </div>
-        </nav>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a style="border-radius: 50px;" id="loginButton" class="btn btn-outline-light my-2 my-sm-0" href="login.html" role="button">Log in</a>
+          </li>
+          <li class="nav-item">
+              <a style="border-radius: 50px;" id="registerButton" class="btn btn-outline-light my-2 my-sm-0" href="register.html" role="button">Register</a>
+          </li>
+          <li class="nav-item">
+              <a style="border-radius: 50px;" id="profileButton" class="btn btn-outline-light my-2 my-sm-0" href="profile.html" role="button">profile</a>
+          </li>
+          <li class="nav-item">
+              <a style="border-radius: 50px;" id="logoutButton" class="btn btn-outline-light my-2 my-sm-0" href="index.html" role="button" onclick="logout(); return false;">Log out</a>
+          </li>
+      </ul>
+  </div>
+</nav>
         <div class="container">
           <div class="pt-5 text-white">
               <header class="py-5 mt-5">
